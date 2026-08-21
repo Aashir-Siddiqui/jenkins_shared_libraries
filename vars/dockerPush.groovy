@@ -1,6 +1,6 @@
 def call(Map config = [:]) {
     def imageName = config.get('imageName', 'notes-app')
-    def imageTag = config.imageTag
+    def imageTag = config.get('imageTag', 'latest')
     def credsId   = config.get('credsId', 'docker-hub-creds')
 
     echo "Pushing ${imageName} to Docker Hub..."
